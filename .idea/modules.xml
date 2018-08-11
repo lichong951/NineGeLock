@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Demos.iml" filepath="$PROJECT_DIR$/Demos.iml" />
       <module fileurl="file://$PROJECT_DIR$/GestureLibray/GestureLibray.iml" filepath="$PROJECT_DIR$/GestureLibray/GestureLibray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GestureLibray/GestureLibray.iml" filepath="$PROJECT_DIR$/GestureLibray/GestureLibray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/NineGeLock.iml" filepath="$PROJECT_DIR$/.idea/NineGeLock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

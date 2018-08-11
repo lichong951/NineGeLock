@@ -1,14 +1,12 @@
 package top.lc951.demos;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.leo.gesturelibrary.enums.LockMode;
 import com.leo.gesturelibrary.view.CustomLockView;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import top.lc951.demos.util.PasswordUtil;
 
@@ -21,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
     public static String INTENT_SECONDACTIVITY_KEY = "INTENT_SECONDACTIVITY_KEY_MAP";
 
 
-//    @BindView(R.id.lv_lock)
+    //    @BindView(R.id.lv_lock)
     CustomLockView lvLock;
-//    @BindView(R.id.tv_hint)
+    //    @BindView(R.id.tv_hint)
     TextView tvHint;
-//    @BindView(R.id.tv_text)
+    //    @BindView(R.id.tv_text)
     TextView tvText;
 
     @Override
@@ -34,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);//调用注解框架
 
-        lvLock=findViewById(R.id.lv_lock);
-        tvHint=findViewById(R.id.tv_hint);
-        tvText=findViewById(R.id.tv_text);
+        lvLock = findViewById(R.id.lv_lock);
+        tvHint = findViewById(R.id.tv_hint);
+        tvText = findViewById(R.id.tv_text);
 
         initView();
         initData();
@@ -67,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private void setLockMode(LockMode mode) {
         String str = "";
-        if (mode==null)
-            mode=VERIFY_PASSWORD;
+        if (mode == null)
+            mode = VERIFY_PASSWORD;
         switch (mode) {
             case CLEAR_PASSWORD:
                 str = "清除密码";
