@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public static String INTENT_SECONDACTIVITY_KEY = "INTENT_SECONDACTIVITY_KEY_MAP";
 
 
+
     public static void  startAction(Context context,LockMode mode){
         Intent intent=new Intent(context,MainActivity.class);
         intent.putExtra(INTENT_SECONDACTIVITY_KEY,mode);
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     //    @BindView(R.id.tv_hint)
     TextView tvHint;
     //    @BindView(R.id.tv_text)
-    TextView tvText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +42,16 @@ public class MainActivity extends AppCompatActivity {
 
         lvLock = findViewById(R.id.lv_lock);
         tvHint = findViewById(R.id.tv_hint);
-        tvText = findViewById(R.id.tv_text);
 
         initView();
         initData();
         initListener();
+
+
+
     }
+
+
 
     public void initView() {
         //显示绘制方向
@@ -93,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
                 setLockMode(VERIFY_PASSWORD, PasswordUtil.getPin(this), str);
                 break;
         }
-        tvText.setText(str);
     }
 
     private void setLockMode(LockMode mode, String password, String msg) {
@@ -106,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             tvHint.setText("请输入要设置的密码");
         }
-        tvText.setText(msg);
     }
 
     public void initListener() {

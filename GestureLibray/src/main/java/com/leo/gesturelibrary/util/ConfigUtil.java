@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
  * Created by leo on 16/2/1.
  */
 public class ConfigUtil {
+    public static String PASS_KEY = "PASS_KEY_MAP";
     private static SharedPreferences sharedPreferences;
     private static ConfigUtil configUtil;
     private static Context context;
@@ -164,5 +165,9 @@ public class ConfigUtil {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.clear();
         editor.commit();
+    }
+
+    public static String checkPassWord(Context context) {
+        return ConfigUtil.getInstance(context).getString(PASS_KEY);
     }
 }

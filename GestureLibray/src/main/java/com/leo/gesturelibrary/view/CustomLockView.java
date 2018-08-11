@@ -31,6 +31,7 @@ import java.util.TimerTask;
  * 手势解锁
  */
 public class CustomLockView extends View {
+
     //保存密码key
     private String saveLockKey = "saveLockKey";
     //是否保存保存PIN
