@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="setPassWord"
+        android:text="设置密码" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="verifyPassword"
+        android:text="验证密码" />
+ <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="changePassword"
+        android:text="修改密码" />
+<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clearPassword"
+        android:text="清理密码" />
+
+</LinearLayout>

@@ -1,5 +1,7 @@
 package top.lc951.demos;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -19,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
     public static String INTENT_SECONDACTIVITY_KEY = "INTENT_SECONDACTIVITY_KEY_MAP";
 
 
+    public static void  startAction(Context context,LockMode mode){
+        Intent intent=new Intent(context,MainActivity.class);
+        intent.putExtra(INTENT_SECONDACTIVITY_KEY,mode);
+        context.startActivity(intent);
+
+    }
     //    @BindView(R.id.lv_lock)
     CustomLockView lvLock;
     //    @BindView(R.id.tv_hint)
@@ -45,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         //显示绘制方向
         lvLock.setShow(true);
         //允许最大输入次数
-        lvLock.setErrorNumber(3);
+        lvLock.setErrorNumber(5);
         //密码最少位数
         lvLock.setPasswordMinLength(4);
         //编辑密码或设置密码时，是否将密码保存到本地，配合setSaveLockKey使用
@@ -90,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setLockMode(LockMode mode, String password, String msg) {
         lvLock.setMode(mode);
-        lvLock.setErrorNumber(3);
-        lvLock.setClearPasssword(false);
+        lvLock.setErrorNumber(5);
+        lvLock.setClearPasssword(true);
         if (mode != SETTING_PASSWORD) {
             tvHint.setText("请输入已经设置过的密码");
             lvLock.setOldPassword(password);
@@ -112,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onComplete(String password, int[] indexs) {
             tvHint.setText(getPassWordHint());
-//            finish();
+            finish();
         }
 
         @Override
